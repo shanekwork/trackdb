@@ -198,6 +198,7 @@ table.searchTable td {
 	clear: both;
 	border-top-left-radius: 10px;
 	border-bottom-right-radius: 40px;
+	box-shadow: 2px 2px 10px #999;
 }
 
 
