@@ -156,6 +156,7 @@ table.searchTable td {
 #uploadContainer {
 	float: left;
 	width: 500px;
+	margin-top: 20px;
 }
 
 
