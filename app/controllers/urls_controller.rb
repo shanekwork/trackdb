@@ -38,7 +38,7 @@ class UrlsController < ApplicationController
   def search
     @search_term = params[:q]
     st = "%#{params[:q]}%"
-    @url = Url.where("email ILIKE ? or custref ILIKE ? or order_number ILIKE ? or url4 ILIKE ? or trader_code ILIKE ? or trader_name ILIKE ?", st, st, st, st, st, st).order("date DESC")
+    @url = Url.where("email ILIKE ? or custref ILIKE ? or order_number ILIKE ? or url4 ILIKE ? or trader_code ILIKE ? or trader_name ILIKE ?", st, st, st, st, st, st).order("date DESC").page(params[:page]).per_page(25)
     respond_to do |format|
       format.html
       format.json {render json: @urls}
