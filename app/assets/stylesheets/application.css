@@ -112,11 +112,14 @@ table.searchTable td {
 
 .errors {
 	clear: both;
-	border-top: 3px ridge #005ad5;
-	border-bottom: 1px ridge #005ad5;
-	width: 250px;
+	background: #005ad5;
+	color: #fff;
+	font-weight: bolder;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	width: 450px;
 	text-align: center;
-	padding: 2px 15px;
+	padding: 4px 15px;
 	margin: 0 auto;
 }
 
