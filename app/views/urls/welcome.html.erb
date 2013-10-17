@@ -1,0 +1,50 @@
+<div id="welcomeContainer">
+
+<h2 style="text-align:center">Welcome to the tracking section for Trade Supply.</h2>
+
+<div id="searchContainer">
+<% if user_signed_in? %>
+		<div id="searchBox">
+			<h3 class="h2Upload">Search by:</h3><p style="text-align: center">Email / Order Number / Delivery Number / Account Code / Company Name</p> <br />
+			<%= render :partial => 'urls/search' %>
+		</div>
+<% else %>
+	<div>
+		<h2 style="text-align:center">Please Register / Sign In</h2>
+	</div>
+<% end %>
+</div>
+
+<% if current_user.try(:admin?) %>
+<div id="uploadContainer">
+
+	<div id="uploadBox">
+		<h2 class="h2Upload">File Upload</h2>
+		<%= form_tag import_urls_path, multipart: true do %>
+		<%= file_field_tag :file %>
+		<%= submit_tag "Submit" %>
+		<% end %>
+	</div>
+<% end %>
+
+</div>
+</div>
+
+<script type="text/javascript">
+jQuery(function(){
+        $("input[value='Search']" ).click(function(){
+        $(".error").hide();
+        var hasError = false;
+        var searchReg = /^[a-zA-Z0-9-]+$/;
+        var searchVal = $("#q").val();
+        if(searchVal == '') {
+            $("#q").after('<span class="error">Please enter a search term.</span>');
+            hasError = true;
+        } else if(!searchReg.test(searchVal)) {
+            $("q").after('<span class="error">Enter valid text.</span>');
+            hasError = true;
+        }
+        if(hasError == true) {return false;}
+    });
+});
+</script>

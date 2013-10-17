@@ -1,0 +1,48 @@
+<div>
+
+<h1 style="text-align:center">Search Result</h1><br />
+
+<h3 style="text-align:center">Searching For: <%= @search_term %></h3>
+
+<table class="searchTable">
+
+<% if @url.length == 0 %><br />
+<h2>No Items found for this search term</h2>
+<% end %>
+
+	<tr class="trtop">
+		<th>Date</th>
+		<th>Email</th>
+		<th>Your Order Number</th>
+		<th>Our Order Number</th>
+		<th>Our Delivery Number</th>
+		<th>Account Code</th>
+		<th>Company Name</th>
+		<th>GLS</th>
+	</tr>
+
+<% @url.each do |u| %>
+
+<tr>
+	<td><%= u.date %></td>
+	<td><%= u.email %></td>
+	<td><%= u.custref %></td>
+	<td><%= u.order_number %></td>
+	<td><%= u.url4 %></td>
+	<td><%= u.trader_code %></td>
+	<td><%= u.trader_name %></td>
+	<td><script>
+    	var hash = hex_md5("<%= u.url2 %>");
+    	var hash2 = ("<%= u.url1 %>" + hash + "<%= u.url3 %><%= u.url4 %><%= u.url5 %>");
+    	document.write("<a target='_blank' href= <%= u.url1 %>" + hash + "<%= u.url3 %><%= u.url4 %><%= u.url5 %>" + ">" + "Track" + "</a>")
+	</script></td>
+</tr>
+
+
+
+<% end %> 
+
+</table>
+
+</div>
+

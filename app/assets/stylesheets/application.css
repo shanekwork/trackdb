@@ -1,0 +1,155 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+a {
+ 	text-decoration: none;
+ }
+
+ body {
+ 	background: #d9d9d9;
+ 	margin: 0;
+ }
+
+.middle {
+	width: 1000px;
+	margin: 0 auto;
+	background: #fff;
+}
+
+div.middle.top {
+	padding-top: 10px;
+	padding-bottom: 40px;
+}
+
+#header {
+	background: #005ad5;
+	height: 140px;
+}
+#head1 {
+	float: left;
+	width: 300px;
+	padding-top: 10px;
+}
+#head2 {
+	float: left;
+	width: 400px;
+	text-align: center;
+}
+#head3 {
+	float: left;
+	width: 300px;
+}
+div.ordertracking {
+	background: #fff;
+	width: 170px;
+	border-radius: 20px;
+	text-align: center;
+	margin-left: 130px;
+	margin-top: 20px;
+}
+
+ul.well {
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+table.searchTable {
+	background: #fff;
+	width: 100%;
+}
+
+table.searchTable th {
+	background: #313131;
+	color: #fff;
+}
+
+table.searchTable td {
+	text-align: center;
+	padding: 6px 3px;
+	background: #d5d5d5;
+}
+
+#nav {
+	width: 980px;
+	float: left;
+	margin: 0 10px 3em 10px;
+	padding: 0;
+	list-style: none;
+	background-color: #313131;
+	border-bottom: 1px solid #ccc; 
+	border-top: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+#nav li {
+	float: left;
+}
+
+#nav li a {
+		display: block;
+		padding: 8px 15px;
+		text-decoration: none;
+		font-weight: bold;
+		color: #fff;
+		border-right: 1px solid #ccc; 
+}
+
+#nav li a:hover {
+		color: #fff;
+		background-color: #999;
+}
+
+.errors {
+	clear: both;
+	border-top: 3px ridge #005ad5;
+	border-bottom: 1px ridge #005ad5;
+	width: 250px;
+	text-align: center;
+	padding: 2px 15px;
+	margin: 0 auto;
+}
+
+#searchBox {
+	background: #333;
+	width: 405px;
+	margin: 0 auto;
+	color: #fff;
+}
+
+#uploadBox {
+	background: #333;
+	width: 305px;
+	color: #fff;
+	margin: 0 auto;
+}
+.h2Upload {
+	background: #fff;
+	color: #333;
+	text-align: center;
+	border: 3px ridge #333;
+}
+
+#welcomeContainer {
+	overflow: auto;
+	clear: both;
+}
+
+#searchContainer {
+	float: left;
+	width: 500px;
+}
+#uploadContainer {
+	float: left;
+	width: 500px;
+}

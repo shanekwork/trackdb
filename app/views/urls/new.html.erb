@@ -1,0 +1,58 @@
+<h2>New Url</h2>
+
+<%= form_for(:url, :url => {:action => 'create'}) do |f| %>
+
+<table>
+
+<tr>
+	<th>order_number</th>
+	<td><%= f.text_field(:order_number) %></td>
+</tr>
+<tr>
+	<th>Url1</th>
+	<td><%= f.text_field(:url1) %></td>
+</tr>
+<tr>
+	<th>Url2</th>
+	<td><%= f.text_field(:url2) %></td>
+</tr>
+<tr>
+	<th>Url3</th>
+	<td><%= f.text_field(:url3) %></td>
+</tr>
+<tr>
+	<th>Url4</th>
+	<td><%= f.text_field(:url4) %></td>
+</tr>
+<tr>
+	<th>Url5</th>
+	<td><%= f.text_field(:url5) %></td>
+</tr>
+<tr>
+	<th>Email</th>
+	<td><%= f.text_field(:email) %></td>
+</tr>
+<tr>
+	<th>Date</th>
+	<td><%= f.text_field(:date) %></td>
+</tr>
+<tr>
+	<th>Customer Ref</th>
+	<td><%= f.text_field(:custref) %></td>
+</tr>
+<tr>
+	<th>Trader Coded</th>
+	<td><%= f.text_field(:trader_code) %></td>
+</tr>
+<tr>
+	<th>Trader Name</th>
+	<td><%= f.text_field(:trader_name) %></td>
+</tr>
+
+</table>
+
+<div>
+<%= submit_tag("Create Url") %>
+</div>
+
+<% end %>

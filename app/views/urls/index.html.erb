@@ -1,0 +1,56 @@
+<div>
+	<div class="span6">
+
+<h2>Database entries</h2><br /><br />
+<%= link_to("Add new Url", {:action => 'new'}, :class => 'btn btn-danger') %><br /><br />
+
+<table>
+
+
+<% @url.each do |u| %>
+
+<ul class="well">
+	<li><%= u.order_number %></li>
+	<li><%= u.url1 %></li>
+	<li><%= u.url2 %></li>
+	<li><%= u.url3 %></li>
+	<li><%= u.url4 %></li>
+	<li><%= u.url5 %></li>
+	<li><%= u.email %></li>
+	<li><%= u.date %></li>
+	<li><%= u.custref %></li>
+	<li><%= u.trader_code %></li>
+	<li><%= u.trader_name %></li>
+</ul>
+
+	<script>
+    	var hash = hex_md5("<%= u.url2 %>");
+    	var hash2 = ("<%= u.url1 %>" + hash + "<%= u.url3 %><%= u.url4 %><%= u.url5 %>");
+    	document.write("<a class='btn btn-info' href= <%= u.url1 %>" + hash + "<%= u.url3 %><%= u.url4 %><%= u.url5 %>" + ">" + "Link" + "</a>")
+	</script>
+
+
+<% end %>
+
+</table>
+
+	</div>
+
+<% if user_signed_in? %>
+	<div class="span6">
+		<div>
+			<%= render :partial => 'urls/search' %>
+		</div>
+<% end %>
+		<h2>Upload file</h2>
+
+		<%= form_tag import_urls_path, multipart: true do %>
+		<%= file_field_tag :file %>
+		<%= submit_tag "Submit" %>
+		<% end %>
+	</div>
+</div><!--row-->
+
+
+
+
