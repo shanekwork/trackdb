@@ -26,9 +26,11 @@ class UrlsController < ApplicationController
   def show
     @url = Url.find(params[:id])
   end
+
   def import
     Url.import(params[:file])
-    redirect_to :action => 'welcome', notice: "Imported"
+    flash[:notice] = "Uploaded Successfully"
+    redirect_to :action => 'welcome'
   end
 
   
