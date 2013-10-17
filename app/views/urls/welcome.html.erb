@@ -18,9 +18,7 @@
 <% if current_user.try(:admin?) %>
 <div id="uploadContainer">
 
-	<% if !flash[:notice].blank? %>
-		<%= flash[:notice] %>
-	<% end %>
+	
 
 	<div id="uploadBox">
 		<h2 class="h2Upload">File Upload</h2>
