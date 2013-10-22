@@ -3,11 +3,13 @@ Trackdb::Application.routes.draw do
 
   root :to => 'urls#welcome'
   get "urls/_search"
+
   get "urls/index"
   get "urls/new"
   get "urls/search"
   get "urls/welcome"
   match '/search' => 'urls#search'
+  
   
   resources :urls do
     collection { post :import }

@@ -2,9 +2,10 @@
 
 <h2 style="text-align:center;margin-bottom:15px !important;">Welcome to the tracking section for Trade Supply.</h2>
 
-<div id="searchContainer">
+
+<div class="searchContainer">
 <% if user_signed_in? %>
-		<div id="searchBox">
+		<div class="searchBox">
 			<h3 class="h2Upload">Search by:</h3><p style="text-align: center">Email / Order Number / Delivery Number / Account Code / Company Name</p> <br />
 			<%= render :partial => 'urls/search' %>
 		</div>
@@ -15,10 +16,9 @@
 <% end %>
 </div>
 
+
 <% if current_user.try(:admin?) %>
 <div id="uploadContainer">
-
-	
 
 	<div id="uploadBox">
 		<h2 class="h2Upload">File Upload</h2>
@@ -27,9 +27,10 @@
 		<%= submit_tag "Submit" %>
 		<% end %>
 	</div>
-<% end %>
+
 
 </div>
+<% end %>
 </div>
 
 <script type="text/javascript">
