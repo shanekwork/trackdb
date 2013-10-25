@@ -1,20 +1,35 @@
-<div id="welcomeContainer">
+<div class="welcomeContainer">
 
 <h2 style="text-align:center;margin-bottom:15px !important;">Welcome to the tracking section for Trade Supply.</h2>
 
-
+<% if current_user.try(:admin?) %>
 <div class="searchContainer">
-<% if user_signed_in? %>
 		<div class="searchBox">
 			<h3 class="h2Upload">Search by:</h3><p style="text-align: center">Email / Order Number / Delivery Number / Account Code / Company Name</p> <br />
 			<%= render :partial => 'urls/search' %>
-		</div>
+		</div><!--searchBox-->
+</div><!--searchContainer-->
+
+<% else %>
+
+
+<div class="searchContainer">
+	<% if user_signed_in? %>
+		<div class="searchBox">
+			<h3 class="h2Upload">Search by:</h3><p style="text-align: center">Email / Order Number</p><br />
+			<%= render :partial => 'urls/search2' %>
+		</div><!--searchBox-->
 <% else %>
 	<div>
 		<h2 style="text-align:center">Please Register / Sign In</h2>
-	</div>
+	</div><!--div h2-->
+</div><!--searchContainer-->
 <% end %>
-</div>
+
+<% end %>
+
+
+
 
 
 <% if current_user.try(:admin?) %>
@@ -28,10 +43,11 @@
 		<% end %>
 	</div>
 
+</div><!--uploadContainer-->
+<% end %><!--if current admin-->
 
-</div>
-<% end %>
-</div>
+</div><!--welcomeContainer-->
+
 
 <script type="text/javascript">
 jQuery(function(){

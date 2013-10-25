@@ -31,7 +31,7 @@ a {
 
 div.middle.top {
 	padding-top: 10px;
-	padding-bottom: 40px;
+	
 }
 
 #header {
@@ -147,9 +147,10 @@ table.searchTable td {
 	border: 3px ridge #333;
 }
 
-#welcomeContainer {
+.welcomeContainer {
 	overflow: auto;
 	clear: both;
+	padding-bottom: 30px;
 }
 
 .searchContainer {
@@ -204,6 +205,7 @@ table.searchTable td {
 	border-top-left-radius: 10px;
 	border-bottom-right-radius: 40px;
 	box-shadow: 2px 2px 10px #999;
+
 }
 
 
@@ -231,9 +233,9 @@ h2 {
 
 #pwdby {
 	height: 30px;
-	
+	clear: both;
 	background: #d9d9d9;
-	
+
 	
 	
 }
