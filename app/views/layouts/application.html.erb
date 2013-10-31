@@ -34,7 +34,7 @@
 
       <ul id="nav">
         <li><a href="http://www.tradesupply.eu">Home</a></li>
-        <li><%= link_to("Track", :action => 'welcome') %>
+        <li><%= link_to "Track", urls_welcome_path %>
           <% if user_signed_in? %>
         <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
         <% else %>

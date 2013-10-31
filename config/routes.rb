@@ -2,7 +2,7 @@ Trackdb::Application.routes.draw do
   devise_for :users
 
   root :to => 'urls#welcome'
-  root :to => 'devise#sign_in'
+  
   get "urls/_search"
   get "urls/_search2"
 
@@ -13,7 +13,7 @@ Trackdb::Application.routes.draw do
   get "urls/welcome"
   match '/search' => 'urls#search'
   match '/search2' => 'urls#search2'
-  
+
   
   resources :urls do
     collection { post :import }
