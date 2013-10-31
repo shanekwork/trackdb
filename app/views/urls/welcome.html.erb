@@ -21,7 +21,7 @@
 		</div><!--searchBox-->
 <% else %>
 	<div>
-		<h2 style="text-align:center">Please Register / Sign In</h2>
+		<h2 class="h2center" style="text-align:center">Please Register / Sign In</h2>
 	</div><!--div h2-->
 </div><!--searchContainer-->
 <% end %>
@@ -46,23 +46,36 @@
 </div><!--uploadContainer-->
 <% end %><!--if current admin-->
 
+<div class="divider"></div>
+
 
 <% if !user_signed_in? %>
+<div class="videoCont">
 <div class="video1">
+	<h2 style="font-weight: bolder; text-align: center; font-size: 34px; line-height: 30px; text-decoration: underline;">Watch the Geting Started Video</h2>
 <iframe src="http://fast.wistia.net/embed/iframe/yr0nfz0ng7" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="586" height="366"></iframe>
 </div><!--video1-->
+</div>
 <% end %>
 
-<% if current_user.try(:admin?) %>
-<div class="video2">
-<iframe src="http://fast.wistia.net/embed/iframe/ol9zxkdirl" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="586" height="366"></iframe>
-</div><!--video1-->
-<% end %>
 
 <% if current_user.try(:admin?) %>
+<div class="videoCont">
 <div class="video3">
+	<h2 style="font-weight: bolder; text-align: center; font-size: 34px; line-height: 30px; text-decoration: underline;">Uploading file from Horizon to Ordertrax</h2>
 <iframe src="http://fast.wistia.net/embed/iframe/jz26897kwz" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="586" height="366"></iframe>
 </div><!--video1-->
+</div>
+<% end %>
+
+
+<% if current_user.try(:admin?) %>
+<div class="videoCont">
+<div class="video2">
+	<h2 style="font-weight: bolder; text-align: center; font-size: 34px; line-height: 30px; text-decoration: underline;">Searching for Orders on Ordertrax</h2>
+<iframe src="http://fast.wistia.net/embed/iframe/ol9zxkdirl" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="586" height="366"></iframe>
+</div><!--video1-->
+</div>
 <% end %>
 
 </div><!--welcomeContainer-->
