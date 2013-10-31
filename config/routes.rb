@@ -2,6 +2,7 @@ Trackdb::Application.routes.draw do
   devise_for :users
 
   root :to => 'urls#welcome'
+  root :to => 'devise#sign_in'
   get "urls/_search"
   get "urls/_search2"
 
@@ -17,6 +18,9 @@ Trackdb::Application.routes.draw do
   resources :urls do
     collection { post :import }
   end
+
+
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -2,6 +2,7 @@ require 'csv'
 class UrlsController < ApplicationController
 
 
+
   def index
     @url = Url.order("urls.date DESC")
   end
@@ -56,6 +57,8 @@ class UrlsController < ApplicationController
       format.json {render json: @url}
     end
   end
+
+
 
 
 end

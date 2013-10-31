@@ -156,6 +156,7 @@ table.searchTable td {
 .searchContainer {
 	float: left;
 	width: 500px;
+	clear: both;
 }
 #uploadContainer {
 	float: left;
@@ -257,9 +258,38 @@ height: 30px;
 width: 164px;
 }
 
+.video1 {
+	width: 586px;
+	margin: 0 auto;
+	clear: both;
+	height: 500px;
+}
 
+.video2 {
+	width: 586px;
+	margin: 0 auto;
+	clear: both;
+	height: 500px;
+}
 
+.video3 {
+	width: 586px;
+	margin: 0 auto;
+	clear: both;
+	height: 500px;
+}
 
+.video1 iframe {
+	margin-top: 50px;
+}
+
+.video2 iframe {
+	margin-top: 50px;
+}
+
+.video3 iframe {
+	margin-top: 50px;
+}
 
 
 

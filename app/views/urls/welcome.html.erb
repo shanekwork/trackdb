@@ -46,6 +46,25 @@
 </div><!--uploadContainer-->
 <% end %><!--if current admin-->
 
+
+<% if !user_signed_in? %>
+<div class="video1">
+<iframe src="http://fast.wistia.net/embed/iframe/yr0nfz0ng7" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="586" height="366"></iframe>
+</div><!--video1-->
+<% end %>
+
+<% if current_user.try(:admin?) %>
+<div class="video2">
+<iframe src="http://fast.wistia.net/embed/iframe/ol9zxkdirl" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="586" height="366"></iframe>
+</div><!--video1-->
+<% end %>
+
+<% if current_user.try(:admin?) %>
+<div class="video3">
+<iframe src="http://fast.wistia.net/embed/iframe/jz26897kwz" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="586" height="366"></iframe>
+</div><!--video1-->
+<% end %>
+
 </div><!--welcomeContainer-->
 
 
